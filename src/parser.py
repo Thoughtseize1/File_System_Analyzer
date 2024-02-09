@@ -1,12 +1,18 @@
-from src.functions import hello_func, goodbye, directory_traversal, show_folder_content, show_folder_content2
+import src.functions as funcs
+from src.manager import manager
 
 OPERATIONS = {
-    'hello': hello_func,
-    "bye": goodbye,
-    'exit': goodbye,
-    'showdirs': directory_traversal,
-    'show': show_folder_content,
-    'sh': show_folder_content2
+    'help': funcs.display_command_help,
+    'hello': funcs.hello_func,
+    'bye': funcs.goodbye,
+    'exit': funcs.goodbye,
+    'analyze': manager.analyse_folder,
+    'current': manager.show_current_folder,
+    'large': manager.show_largest_files,
+    'setsize': manager.set_max_size,
+    'show': manager.display_folder_data,
+    'stats': manager.show_size_by_extension,
+    'permissions': manager.show_permissions
 }
 
 
