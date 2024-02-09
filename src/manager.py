@@ -60,7 +60,7 @@ class Config():
 
 class FolderManager(Config):
     TEXT_EXTENSIONS = ['.txt', '.csv', '.docx', '.pdf']
-    IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', 'HEIC']
+    IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.HEIC']
     EXECUTABLE_EXTENSIONS = ['.exe', '.dll', '.bat']
     VIDEO_EXTENSIONS = ['.mp4', '.avi', '.mkv', '.mov', '.ts']
 
