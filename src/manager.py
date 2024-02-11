@@ -254,8 +254,10 @@ class FolderManager(Config):
         :param args: Optional folder path provided by the user.
                      If provided, it sets the current folder to the joined path of the arguments.
         """
-        if args:
+        if args and isinstance(args, tuple):
             self.current_folder = " ".join(args)
+        elif args and isinstance(args, str) and os.path.exists(args):
+            self.current_folder = args
         elif self.current_folder == os.getcwd():
             print(f"You are in {self.current_folder}")
 
@@ -267,6 +269,57 @@ class FolderManager(Config):
         :return: None
         """
         print(f"Current folder is {self.current_folder}")
+
+    def show_dirs(self, *args):
+        """
+        Display the current folder path.
+
+        :param *args: Additional arguments (not used in this function).
+        :return: None
+        """
+        dirs = [[dir] for dir in os.listdir(self.current_folder) if
+                os.path.isdir(os.path.join(self.current_folder, dir))]
+        if dirs:
+            table = tabulate(dirs, headers=["Available folders:"], tablefmt=self._selected_format)
+            print(table)
+        else:
+            print("There are no available folders")
+
+    def join_dir(self, *args):
+        """
+        Join the current directory with the specified subdirectory and set it as the new current directory.
+
+        :param args: The name of the subdirectory to join. Should be a single string.
+        :return: True if the operation is successful and the directory exists, False otherwise.
+
+         Otherwise, it prints an error message and returns False.
+        """
+        if not args:
+            print("Please enter a valid dir name")
+            return False
+        new_path = os.path.join(self.current_folder, args[0])
+        if os.path.isdir(new_path):
+            print(f"You are in {self.current_folder}")
+            self.current_folder = new_path
+            return True
+        else:
+            print(f"{args[0]} is not a valid directory")
+            return False
+
+    def go_up_one_level(self, *args):
+        """
+        Move one level up in the directory hierarchy.
+
+        :return: True if successful, False otherwise
+        """
+        parent_dir = os.path.dirname(self.current_folder)
+        if os.path.isdir(parent_dir):
+            self.current_folder = parent_dir
+            print(f"You are in {self.current_folder}")
+            return True
+        else:
+            print("Cannot move up. Already at the root directory or an error occurred.")
+            return False
 
     def display_folder_data(self, *args):
         """

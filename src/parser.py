@@ -8,9 +8,13 @@ OPERATIONS = {
     'exit': funcs.goodbye,
     'analyze': manager.analyse_folder,
     'current': manager.show_current_folder,
+    'setcurrent': manager.set_current_folder,
+    'dirs': manager.show_dirs,
     'large': manager.display_largest_files,
     'setsize': manager.set_max_size,
     'show': manager.display_folder_data,
+    "cd": manager.join_dir,
+    "..": manager.go_up_one_level,
     'stats': manager.display_size_by_extension,
     'permissions': manager.display_permissions
 }
