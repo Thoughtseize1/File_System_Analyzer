@@ -399,7 +399,7 @@ class FolderManager(Config):
             table = tabulate(table_data, headers=["Files type", "Category size"], tablefmt="grid")
             print(table)
         else:
-            print("The folder has not been analyzed yet. Please run the analysis first.")
+            print("The folder has not been analyzed yet. Please run the analyze first.")
 
 
 manager = FolderManager()

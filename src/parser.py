@@ -4,6 +4,7 @@ from src.manager import manager
 OPERATIONS = {
     'help': funcs.display_command_help,
     'hello': funcs.hello_func,
+    'hi': funcs.hello_func,
     'bye': funcs.goodbye,
     'exit': funcs.goodbye,
     'analyze': manager.analyse_folder,

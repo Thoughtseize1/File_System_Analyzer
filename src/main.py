@@ -13,7 +13,7 @@ def main():
             if command:
                 command(*params)
             else:
-                print(f"{manager.colors['RED']}No command specified")
+                print(f"{manager.colors['RED']}No command specified. Use the command 'help' to see available commands")
     except KeyboardInterrupt:
         print("\nGoodbye!")
         exit()
