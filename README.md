@@ -29,7 +29,10 @@ You can install an application directly on your system or in a virtual environme
 pip install -i https://test.pypi.org/simple/ File-System-Analyzer
 ```
 
-🚩After installing, you can use the command `file-analyzer` in CMD to access the File System Insight Tool.
+🚩After installing, you can use the command ```file-analyzer``` in CMD to access the File System Insight Tool.
+
+### 🎞[The application is demonstrated in a YouTube video.](https://youtu.be/uCHoidUI-ao)
+
 ## Avaliable commands
 
 | Command   | Description                                               | Example                                      |
@@ -50,4 +53,3 @@ pip install -i https://test.pypi.org/simple/ File-System-Analyzer
 | permissions| Show files with unusual permissions (World-writable or Read-only)| permissions                          |
 
 
-![Example](https://github.com/Thoughtseize1/File_System_Insight_Tool/blob/main/example/Example.png)
