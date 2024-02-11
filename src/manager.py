@@ -256,6 +256,7 @@ class FolderManager(Config):
         """
         if args and isinstance(args, tuple) and os.path.exists(" ".join(args)):
             self.current_folder = " ".join(args)
+            print(f"You are in {self.current_folder}")
             return True
         elif args and isinstance(args[0], str) and os.path.exists(args[0]):
             self.current_folder = args
