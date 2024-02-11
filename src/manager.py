@@ -152,7 +152,7 @@ class FolderManager(Config):
         :return: True if the folder is successfully collected and processed, False otherwise.
         """
         self.reset_data()
-        self.set_current_folder(args)
+        self.set_current_folder(*args)
         if not os.path.exists(self.current_folder) or not os.path.isdir(self.current_folder):
             print("The folder does not exist.")
             return False
@@ -243,7 +243,7 @@ class FolderManager(Config):
             print(
                 f"Invalid size. You should write size in MB.\n{self.colors['YELLOW']}Example:{self.colors['RESET']} setsize 450")
 
-    def set_current_folder(self, args):
+    def set_current_folder(self, *args):
         """
         Set the current working folder based on the provided arguments.
 
@@ -254,12 +254,12 @@ class FolderManager(Config):
         :param args: Optional folder path provided by the user.
                      If provided, it sets the current folder to the joined path of the arguments.
         """
-        if args and isinstance(args, tuple):
+        if args and isinstance(args, tuple) and os.path.exists(" ".join(args)):
             self.current_folder = " ".join(args)
-        elif args and isinstance(args, str) and os.path.exists(args):
+            return True
+        elif args and isinstance(args[0], str) and os.path.exists(args[0]):
             self.current_folder = args
-        elif self.current_folder == os.getcwd():
-            print(f"You are in {self.current_folder}")
+        print(f"You are in {self.current_folder}")
 
     def show_current_folder(self, *args):
         """
@@ -299,8 +299,8 @@ class FolderManager(Config):
             return False
         new_path = os.path.join(self.current_folder, args[0])
         if os.path.isdir(new_path):
-            print(f"You are in {self.current_folder}")
             self.current_folder = new_path
+            print(f"You are in {self.current_folder}")
             return True
         else:
             print(f"{args[0]} is not a valid directory")

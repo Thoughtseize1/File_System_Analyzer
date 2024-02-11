@@ -8,7 +8,7 @@ OPERATIONS = {
     'exit': funcs.goodbye,
     'analyze': manager.analyse_folder,
     'current': manager.show_current_folder,
-    'setcurrent': manager.set_current_folder,
+    'goto': manager.set_current_folder,
     'dirs': manager.show_dirs,
     'large': manager.display_largest_files,
     'setsize': manager.set_max_size,

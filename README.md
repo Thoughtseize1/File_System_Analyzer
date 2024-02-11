@@ -30,16 +30,22 @@ File System Insight Tool is a tool for analyzing the file system. It provides de
     cd file-system-insight-tool
 ## Avaliable commands
 
-| Command      | Description                                 | Example                                  |
-|--------------|---------------------------------------------|------------------------------------------|
-| `hello`      | Display a greeting message                  | `hello`                                  |
-| `bye/exit`   | End the program                             | `bye`                                    |
-| `analyze`    | Analyze the specified folder                | `analyze OR analyze D:\Torrents`        |
-| `show`       | Display the contents of the current folder  | `show OR show D:\Torrents`               |
-| `large`      | Show the largest files in the folder        | `largest`                                |
-| `setsize`    | Set the threshold size for identifying large files (in MB) | `setsize 500`                    |
-| `current`    | Display the current folder                  | `current`                               |
-| `stats`      | Show statistics about file types and sizes  | `stats`                                 |
-| `permissions`| Show files with unusual permissions<br>World-writable or Read-only | `permissions`            |
+| Command   | Description                                               | Example                                      |
+|-----------|-----------------------------------------------------------|----------------------------------------------|
+| help      | Display command help                                      | help                                         |
+| hello     | Display a greeting message                                | hello                                        |
+| bye/exit  | End the program                                           | bye or exit                                  |
+| analyze   | Analyze the specified folder                              | analyze OR analyze D:\Torrents               |
+| current   | Display the current folder                                | current                                      |
+| goto| Set the current folder                                    | goto C:\Projects                       |
+| dirs      | Display the available folders                             | dirs                                         |
+| large     | Show the largest files in the folder                      | large                                        |
+| setsize   | Set the threshold size for identifying large files (in MB)| setsize 500                                  |
+| show      | Display the contents of the current folder                | show OR show D:\Torrents                    |
+| cd        | Join a specified subdirectory                             | cd venv                                      |
+| ..        | Move up one level in the directory tree                   | ..                                           |
+| stats     | Show statistics about file types and sizes                | stats                                        |
+| permissions| Show files with unusual permissions (World-writable or Read-only)| permissions                               |
 
-![Example](https://i.im.ge/2024/02/11/cASVaS.Screenshot-2024-02-11-171202.png)
+
+![Example](https://github.com/Thoughtseize1/File_System_Insight_Tool/blob/main/example/Example.png)
