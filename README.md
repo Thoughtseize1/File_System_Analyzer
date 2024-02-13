@@ -38,16 +38,16 @@ pip install -i https://test.pypi.org/simple/ File-System-Analyzer
 | Command   | Description                                               | Example                                      |
 |-----------|-----------------------------------------------------------|----------------------------------------------|
 | help      | Display command help                                      | help                                         |
-| hello/hi    | Display a greeting message                              | hello                                        |
+| hello/hi  | Display a greeting message                                | hello                                        |
 | bye/exit  | End the program                                           | bye or exit                                  |
 | analyze   | Analyze the specified folder                              | analyze OR analyze D:\Torrents               |
-| current   | Display the current folder                                | current                                      |
-| goto      | Set the current folder                                    | goto C:\Projects                       |
+| current   | Set the current folder                                    | current                                      |
+| goto      | Go to the specific folder with full path                  | goto C:\Projects                             |
 | dirs      | Display the available folders                             | dirs                                         |
 | large     | Show the largest files in the folder                      | large                                        |
 | setsize   | Set the threshold size for identifying large files (in MB)| setsize 500                                  |
-| show      | Display the contents of the current folder                | show OR show D:\Torrents                    |
-| cd        | Change the current working directory to the specified path| cd venv                                     |
+| show      | Display the contents of the current folder                | show OR show D:\Torrents                     |
+| cd        | Change the current working directory to the specified path| cd venv                                      |
 | ..        | Move up one level in the directory tree                   | ..                                           |
 | stats     | Show statistics about file types and sizes                | stats                                        |
 | permissions| Show files with unusual permissions (World-writable or Read-only)| permissions                          |
