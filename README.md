@@ -15,7 +15,7 @@ File System Insight Tool is a tool for analyzing the file system. It provides de
  - Detection of large files with the ability to set a custom size threshold.
  - Display files with unusual permissions, such as world-writable or read-only.   
  - Efficient error handling for scenarios like inaccessible directories
- - Change the current working directory using the 'cd' command, and move one level up in the directory hierarchy using the '..' command.
+ - Change the current working directory using the ```cd``` command, and move one level up in the directory hierarchy using the```..``` command.
 
 ## Requirements
 
