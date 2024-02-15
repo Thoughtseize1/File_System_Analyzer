@@ -31,7 +31,7 @@ pip install -i https://test.pypi.org/simple/ File-System-Analyzer
 
 🚩After installing, you can use the command ```file-analyzer``` in CMD to access the File System Insight Tool.
 
-### 🎞[The application is demonstrated in a YouTube video.](https://youtu.be/uCHoidUI-ao)
+### 🎞[The new ver. of application is demonstrated in a YouTube video.](https://youtu.be/7JGrvEsDO0w)
 
 ## Avaliable commands
 | Command   | Description                                               | Example                                      |
