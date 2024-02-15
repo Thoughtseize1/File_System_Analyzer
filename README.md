@@ -34,22 +34,20 @@ pip install -i https://test.pypi.org/simple/ File-System-Analyzer
 ### 🎞[The application is demonstrated in a YouTube video.](https://youtu.be/uCHoidUI-ao)
 
 ## Avaliable commands
-
 | Command   | Description                                               | Example                                      |
 |-----------|-----------------------------------------------------------|----------------------------------------------|
 | help      | Display command help                                      | help                                         |
-| hello/hi  | Display a greeting message                                | hello                                        |
-| bye/exit  | End the program                                           | bye or exit                                  |
-| analyze   | Analyze the specified folder                              | analyze OR analyze D:\Torrents               |
-| current   | Set the current folder                                    | current                                      |
-| goto      | Go to the specific folder with full path                  | goto C:\Projects                             |
-| dirs      | Display the available folders                             | dirs                                         |
-| large     | Show the largest files in the folder                      | large                                        |
-| setsize   | Set the threshold size for identifying large files (in MB)| setsize 500                                  |
-| show      | Display the contents of the current folder                | show OR show D:\Torrents                     |
-| cd        | Change the current working directory to the specified path| cd venv                                      |
-| ..        | Move up one level in the directory tree                   | ..                                           |
+| bye       | Say goodbye                                               | bye                                          |
+| exit      | Exit the program                                          | exit                                         |
+| analyze   | Analyze the contents of a folder. The current folder will be analyzed if the command is called without parameters. | analyze OR analyze D:\Torrents               |
+| goto      | Set the current working folder based on the provided arguments. | goto <folder_path>                         |
+| dirs      | Display the current folder path and available subfolders. | dirs                                         |
+| large     | Display the largest files in the current folder            | large                                        |
+| setsize   | Set the threshold size for identifying large files (in MB)| setsize <size>                               |
+| show      | Display the contents of the current folder or the specified folder path. | show OR show <folder_path>                |
+| cd        | Change the current working directory to the specified path.| cd <directory> OR cd venv                   |
+| ..        | Move up one level in the directory structure               | ..                                           |
 | stats     | Show statistics about file types and sizes                | stats                                        |
-| permissions| Show files with unusual permissions (World-writable or Read-only)| permissions                          |
-
-
+| permissions| Show files with unusual permissions (World-writable or Read-only) | permissions                         |
+| ignore    | Display the list of folders currently marked to be ignored during analysis. Ignored folders will be excluded from the analysis process. | ignore                    |
+| addignore | Add a folder to the list of ignored folders. Folders in this list will not be analyzed in subsequent operations. | addignore                       |
