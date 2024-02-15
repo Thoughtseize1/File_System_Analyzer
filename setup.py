@@ -6,7 +6,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='File-System-Analyzer',
-    version='0.1.8',
+    version='0.1.9',
     description="Personal virtual assistant for files in system.",
     long_description=long_description,
     long_description_content_type="text/markdown",
