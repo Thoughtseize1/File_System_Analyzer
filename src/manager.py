@@ -57,6 +57,14 @@ class Config():
             size_in_gb = size_in_kb / (self.ONE_KILOBYTE * self.ONE_KILOBYTE)
             return f"{size_in_gb:.2f} GB"
 
+    def display_ignoring_folders(self, *args):
+        print(f"Ignored folders:\n{self.skipped_dir_names}")
+
+    def add_to_ignore_list(self, *args):
+        print(f"Folder \"{args[0]}\" was added to ignore list")
+        self.skipped_dir_names.append(args[0])
+        self.display_ignoring_folders()
+
 
 class FolderManager(Config):
     TEXT_EXTENSIONS = ['.txt', '.csv', '.docx', '.pdf']
@@ -256,20 +264,10 @@ class FolderManager(Config):
         """
         if args and isinstance(args, tuple) and os.path.exists(" ".join(args)):
             self.current_folder = " ".join(args)
-            print(f"You are in {self.current_folder}")
             return True
         elif args and isinstance(args[0], str) and os.path.exists(args[0]):
             self.current_folder = args
         print(f"You are in {self.current_folder}")
-
-    def show_current_folder(self, *args):
-        """
-        Display the current folder path.
-
-        :param *args: Additional arguments (not used in this function).
-        :return: None
-        """
-        print(f"Current folder is {self.current_folder}")
 
     def show_dirs(self, *args):
         """
